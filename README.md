@@ -20,17 +20,88 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+# Frontend Mentor - Todo app solution
 
-To learn more about Next.js, take a look at the following resources:
+This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Table of contents
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-## Deploy on Vercel
+## Overview
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### The challenge
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Users should be able to:
+
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Add new todos to the list
+- Mark todos as complete
+- Delete todos from the list
+- Filter by all/active/complete todos
+- Clear all completed todos
+- Toggle light and dark mode
+- **Bonus**: Drag and drop to reorder items on the list
+
+### Screenshot
+
+![](./src/Screenshot%202023-12-02%20at%2019-47-19%20Todo%20App.png)
+
+### Links
+
+- Solution URL: [Add solution URL here](https://todo-app-frontend-mentor-challenge-ten.vercel.app/)
+- Live Site URL: [Add live site URL here](https://rb.gy/76f6vx)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- Tailwind css
+- DaisyUI
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+
+### What I learned
+
+How to emplement the drag and drop feature inside of react.
+
+Main function below
+
+```js
+const handleRearrangeItems = () => {
+  const sortedTodos = [...todos];
+
+  if (draggedItem.current === undefined) return;
+
+  const draggedItemContent = sortedTodos.splice(draggedItem.current, 1)[0];
+
+  if (draggedOverItem.current === undefined) return;
+
+  sortedTodos.splice(draggedOverItem.current, 0, draggedItemContent);
+
+  setTodos(sortedTodos);
+  setSelectedFilter('all');
+};
+```
+
+### Continued development
+
+Continue to learn NextJS.
+
+## Author
+
+- Frontend Mentor - [@Beshoynady93](https://www.frontendmentor.io/profile/Beshoynady93)
+- Twitter - [@BeshoynadyNN](https://www.twitter.com/BeshoynadyNN)
