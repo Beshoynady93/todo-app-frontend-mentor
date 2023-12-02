@@ -3,25 +3,69 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  --primary-bright-blue: hsl(220, 98%, 61%);
+  --primary-background: linear-gradient hsl(192, 100%, 67%) to
+    hsl(280, 87%, 65%);
 
+  /* ### Neutral */
+
+  /* ### Light Theme */
+
+  --neurtal-light-gray: hsl(0, 0%, 98%);
+  --neutral-light-Grayish-Blue: hsl(236, 33%, 92%);
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+  --main-bg: var(--Light-Grayish-Blue);
+  --todos-input-bg: var(--neutral-light-Grayish-Blue);
+  --text-fade: var(--Dark-Grayish-Blue);
+  --text-main: var(--Very-Dark-Grayish-Blue);
+}
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    /* ### Dark Theme */
+
+/* --neurtal-light-gray: hsl(235, 21%, 11%);
+    --neutral-light-Grayish-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue: hsl(234, 39%, 85%);
+    --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+    --Very-Dark-Grayish-Blue-hover: hsl(237, 14%, 26%);
+
+    --main-bg: var(--neurtal-light-gray);
+    --todos-input-bg: var(--neutral-light-Grayish-Blue);
+    --text-fade: var(--Dark-Grayish-Blue);
+    --text-main: var(--Light-Grayish-Blue);
+  } */
+/* }  */
+
+.light {
+  --neurtal-light-gray: hsl(0, 0%, 98%);
+  --neutral-light-Grayish-Blue: hsl(236, 33%, 92%);
+  --Light-Grayish-Blue: hsl(233, 11%, 84%);
+  --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+  --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+  --main-bg: var(--neurtal-light-gray);
+  --todos-input-bg: var(--neutral-light-Grayish-Blue);
+  --text-fade: var(--Dark-Grayish-Blue);
+  --text-main: var(--Very-Dark-Grayish-Blue);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.dark {
+  --neurtal-light-gray: hsl(235, 21%, 11%);
+  --neutral-light-Grayish-Blue: hsl(235, 24%, 19%);
+  --Light-Grayish-Blue: hsl(234, 39%, 85%);
+  --Light-Grayish-Blue: hsl(236, 33%, 92%); /*(hover)*/
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+  --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+
+  --main-bg: var(--neurtal-light-gray);
+  --todos-input-bg: var(--neutral-light-Grayish-Blue);
+  --text-fade: var(--Dark-Grayish-Blue);
+  --text-main: var(--Light-Grayish-Blue);
 }
